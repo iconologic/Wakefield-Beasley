@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Wakefield Beasley{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Stylesheets -->
+    {{ "bootstrap.css" | asset_url | stylesheet_tag }}
+    {{ "styles.css" | asset_url | stylesheet_tag }}
+    
+    <!-- Custom Global Styles -->
+    <style>
+
+    </style>
+
+</head>
+<body>
+  
+    <!-- Navigation Menu -->
+    <!-- {% include "navigation" %} -->
+    
+    <!-- Main Content -->
+    <div class="container-fluid">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Scripts -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    {{ "bootstrap.js" | asset_url | script_tag }}
+
+  </body>
+</html>
